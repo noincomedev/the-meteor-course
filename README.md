@@ -4,6 +4,13 @@
 
 Learn how **I** build [SPAs](https://en.wikipedia.org/wiki/Single-page_application) from `--bare` [Meteor](https://www.meteor.com) app to production. [Apollo](https://www.apollographql.com) and [React](https://www.reactjs.org) included!
 
+===
+If you started the server with meteor run, shutdown your server (`ctrl+c` on terminal!) and launch again with `npm run dev` to load development settings file.
+
+====
+
+# You need [NODEJS/NPM](https://nodejs.org/en/) to be installed on your machine!
+
 ### CONTENT
 
 - Users -> signup, login, logout.

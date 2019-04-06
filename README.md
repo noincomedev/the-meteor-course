@@ -25,7 +25,7 @@ Learn how **I** build [SPAs](https://en.wikipedia.org/wiki/Single-page_applicati
 - Checkout to commit [9e50df](https://github.com/noincomedev/the-meteor-course/commit/9e50df20288148625a16dd6e2b639a52040bac31)
 - Run `npm run dev` on your terminal
 - Read server console logs
-- Checkout to next commit, server will restart with new messages, files, etc. You should ready every diff between commits!
+- Checkout to next commit, server will restart with new messages, files, etc. You should check code diff between commits!
 
 ### GIT GUIDELINES
 

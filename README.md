@@ -4,6 +4,11 @@
 
 Learn how **I** build [SPAs](https://en.wikipedia.org/wiki/Single-page_application) from `--bare` [Meteor](https://www.meteor.com) app to production. [Apollo](https://www.apollographql.com) and [React](https://www.reactjs.org) included!
 
+### REQUERIMENTS
+
+- [NODEJS/NPM](https://nodejs.org/en/)
+- [Meteor](https://www.meteor.com)
+
 ### CONTENT
 
 - Users -> signup, login, logout.
@@ -12,6 +17,15 @@ Learn how **I** build [SPAs](https://en.wikipedia.org/wiki/Single-page_applicati
 - Querys and Mutations (GraphQL)
 - RESTDataSource (GraphQL)
 - Deploying
+
+### HOW TO GET STARTED
+
+- Clone this repo.
+- Fetch development branch.
+- Checkout to commit [9e50df](https://github.com/noincomedev/the-meteor-course/commit/9e50df20288148625a16dd6e2b639a52040bac31)
+- Run `npm run dev` on your terminal
+- Read server console logs
+- Checkout to next commit, server will restart with new messages, files, etc. You should ready every diff between commits!
 
 ### GIT GUIDELINES
 

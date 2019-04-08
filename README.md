@@ -18,14 +18,22 @@ Learn how **I** build [SPAs](https://en.wikipedia.org/wiki/Single-page_applicati
 - RESTDataSource (GraphQL)
 - Deploying
 
+### SLACK
+
+Join [The Meteor Course](https://themeteorcourse.slack.com/) slack to get notified when new code is available to pull!
+
 ### HOW TO GET STARTED
 
 - Clone this repo.
 - Fetch development branch.
 - Checkout to commit [9e50df](https://github.com/noincomedev/the-meteor-course/commit/9e50df20288148625a16dd6e2b639a52040bac31)
-- Run `npm run dev` on your terminal
+- Run `npm install --s` on your terminal
+- Then `npm run dev`
 - Read server console logs
-- Checkout to next commit, server will restart with new messages, files, etc. You should check code diff between commits!
+- Open your browser on `localhost:3000`
+- Open browser devtool console to read messages, if any
+- Checkout to next commit, server will restart with new console.log messages (server and client side!), files, etc.
+- You should check code diff between commits!
 
 ### GIT GUIDELINES
 

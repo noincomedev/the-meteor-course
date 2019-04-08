@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 
-const Stateless = ({ title }) => (
+const Stateless = ({ children, title }) => (
   <div className="container col align-center justify-center">
     <h2>{title}</h2>
-    <p>
-      This is a stateless component. There is no state available on this
-      components, just the props. we use CamelCase for naming react components.
-    </p>
+    {children}
   </div>
+);
+
+const Subheading = () => (
+  <p>
+    This is a stateless component. There is no state available on this
+    components, just the props. we use CamelCase for naming react components.
+  </p>
 );
 
 class App extends Component {
@@ -21,7 +25,9 @@ class App extends Component {
     const { count } = this.state;
     return (
       <div className="container col align-center justify-center">
-        <Stateless title="TITLE AS PROP" />
+        <Stateless title="TITLE AS PROP">
+          <Subheading />
+        </Stateless>
         <h1>THIS IS A REACT STATEFULL COMPONENT</h1>
         <p>
           Statefull components inherit component lifecicle and also have state!{" "}

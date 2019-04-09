@@ -15,13 +15,28 @@ const Subheading = () => (
 );
 
 class App extends Component {
-  state = {
-    count: 0
-  };
+  constructor(props) {
+    super(props);
+    const { title } = props;
+    this.state = {
+      count: title ? 0 : 100
+    };
+  }
+
+  componentDidMount() {
+    console.log("DID MOUNT");
+  }
+
+  componentDidUpdate() {
+    console.log("DID UPDATE");
+  }
 
   updateCount = () => this.setState({ count: (this.state.count += 1) });
 
   render() {
+    console.log("RENDER");
+    console.log(this.props);
+
     const { count } = this.state;
     return (
       <div className="container col align-center justify-center">

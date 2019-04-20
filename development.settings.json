@@ -1,6 +1,22 @@
 {
   "public": {
     "name": "The Meteor Course",
+    "router": {
+      "public_routes": {
+        "index": {
+          "NAME": "index",
+          "PATH": "/",
+          "TITLE": "HOME",
+          "CONTENT": "index"
+        },
+        "add_todo": {
+          "NAME": "add-todo",
+          "PATH": "/add-todo",
+          "TITLE": "Add Todo",
+          "CONTENT": "add-todo"
+        }
+      }
+    },
     "constants": {
       "pages": {
         "index": {
@@ -13,6 +29,11 @@
             "ACTION_BTN_LBL": "Close"
           }
         }
+      }
+    },
+    "nav": {
+      "public": {
+        "LINKS": [{ "key": "link1", "to": "/add-todo", "label": "ADD TODO" }]
       }
     }
   }

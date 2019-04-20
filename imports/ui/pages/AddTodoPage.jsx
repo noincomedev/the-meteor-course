@@ -1,9 +1,9 @@
 import React from "react";
 
+import TodoForm from "../components/forms/TodoForm";
+
 export default () => (
   <div className="container justify-content-center">
-    <header className="header">
-      <h1 className="headline">ADD TODO</h1>
-    </header>
+    <TodoForm />
   </div>
 );

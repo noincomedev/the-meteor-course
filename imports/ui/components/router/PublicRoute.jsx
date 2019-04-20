@@ -13,7 +13,6 @@ const PublicRoute = ({
   title
 }) => {
   if (Meteor.userId()) return <Redirect to="/" />;
-  console.log(match);
   return (
     <Route
       exact={exact}

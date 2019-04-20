@@ -14,6 +14,12 @@
           "PATH": "/add-todo",
           "TITLE": "Add Todo",
           "CONTENT": "add-todo"
+        },
+        "not_found": {
+          "NAME": "not_found",
+          "PATH": "/not_found",
+          "TITLE": "Not Found",
+          "CONTENT": "not_found"
         }
       }
     },
@@ -28,6 +34,16 @@
           "item": {
             "ACTION_BTN_LBL": "Close"
           }
+        }
+      }
+    },
+    "forms": {
+      "add_todo": {
+        "input": {
+          "PLACEHOLDER": "TODO:"
+        },
+        "submit": {
+          "LABEL": "ADD"
         }
       }
     },

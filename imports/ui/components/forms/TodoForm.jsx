@@ -4,13 +4,27 @@ import FormValidation from "../utils/FormValidation";
 
 class TodoForm extends Component {
   onSubmit = () => {
-    console.log("ON SUBMIT TODO");
+    console.log("TRIGGER CREATE TODO MUTATION");
   };
 
   render() {
     return (
       <FormValidation onHandleSubmit={this.onSubmit}>
-        <h1 className="headline">TODO FORM</h1>
+        <div className="container col align-items-center">
+          <input
+            type="text"
+            className="input-text"
+            required
+            placeholder={
+              Meteor.settings.public.forms.add_todo.input.PLACEHOLDER
+            }
+          />
+          <input
+            className="button"
+            type="submit"
+            value={Meteor.settings.public.forms.add_todo.submit.LABEL}
+          />
+        </div>
       </FormValidation>
     );
   }

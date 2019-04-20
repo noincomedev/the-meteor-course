@@ -7,6 +7,7 @@ import PublicRoute from "./PublicRoute";
 
 import AddTodo from "../../pages/AddTodoPage";
 import Index from "../../pages/IndexPage";
+import NotFound from "../../pages/NotFoundPage";
 
 const Router = ({ loading, user }) => {
   if (loading) return <h1>LOADING</h1>;
@@ -28,6 +29,14 @@ const Router = ({ loading, user }) => {
           title={Meteor.settings.public.router.public_routes.add_todo.TITLE}
           content={Meteor.settings.public.router.public_routes.add_todo.CONTENT}
           component={AddTodo}
+        />
+        <PublicRoute
+          name={Meteor.settings.public.router.public_routes.not_found.NAME}
+          title={Meteor.settings.public.router.public_routes.not_found.TITLE}
+          content={
+            Meteor.settings.public.router.public_routes.not_found.CONTENT
+          }
+          component={NotFound}
         />
       </Switch>
     </BrowserRouter>

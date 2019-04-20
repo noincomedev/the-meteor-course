@@ -28,6 +28,22 @@ body {
   width: 33%;
 }
 
+.button {
+  cursor: pointer;
+  border-radius: 15px;
+  height: 6vh;
+  background: black;
+  outline: none !important;
+  border: 2px solid fuchsia;
+  color: fuchsia;
+  min-width: 125px;
+}
+
+.button:hover {
+  background-color: fuchsia;
+  color: white;
+}
+
 .headline {
   color: greenyellow;
   font-size: 2.5rem;
@@ -37,6 +53,24 @@ body {
 .header {
   height: 33vh;
   border: 1px solid yellowgreen;
+}
+
+.input-text {
+  height: 48px;
+  background-color: black;
+  border: 1px solid yellowgreen;
+  color: yellowgreen;
+  font-size: 32px;
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.input-text:focus {
+  outline: none !important;
+  height: 48px;
+  background-color: black;
+  border: 1px solid yellow !important;
+  color: yellow !important;
 }
 
 .justify-content-center {

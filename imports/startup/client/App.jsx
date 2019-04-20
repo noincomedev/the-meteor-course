@@ -3,8 +3,7 @@ import { Accounts } from "meteor/accounts-base";
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
 
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
+import Router from "../../ui/components/router/Router";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -16,17 +15,8 @@ const client = new ApolloClient({
     }))
 });
 
-const ROOT_QUERY = gql`
-  query rootQuery {
-    user {
-      _id
-      name
-    }
-  }
-`;
-
 export default () => (
   <ApolloProvider client={client}>
-    <h1>Hello APOLLO</h1>
+    <Router />
   </ApolloProvider>
 );

@@ -1,5 +1,19 @@
 {
   "public": {
-    "name": "The Meteor Course"
+    "name": "The Meteor Course",
+    "constants": {
+      "pages": {
+        "index": {
+          "HEADLINE": "TODO:LIST"
+        }
+      },
+      "lists": {
+        "todos": {
+          "item": {
+            "ACTION_BTN_LBL": "Close"
+          }
+        }
+      }
+    }
   }
 }

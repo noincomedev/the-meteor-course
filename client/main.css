@@ -5,9 +5,10 @@ body {
 
 #react-root {
   height: 100%;
+  background-color: black;
 }
 
-.align-center {
+.align-items-center {
   align-items: center;
 }
 
@@ -21,12 +22,33 @@ body {
   flex-direction: column;
 }
 
+.col-1-3 {
+  width: 33%;
+}
+
 .headline {
-  color: red;
+  color: greenyellow;
   font-size: 2.5rem;
   margin: 0;
 }
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-space-bet {
+  justify-content: space-between;
+}
+
+.nav {
+  padding: 32px;
+}
+
+.todo {
+  border: 1px solid yellow;
+  padding: 8px 16px;
+}
+
+.todo-title {
+  color: white;
 }

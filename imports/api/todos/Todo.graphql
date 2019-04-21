@@ -1,0 +1,13 @@
+type Todo {
+  _id: ID
+  createAt: String
+  taskName: String
+}
+
+extend type Query {
+  allTodos: [Todo]
+}
+
+type Mutation {
+  createTodo(taskName: String!): Todo
+}

@@ -1,28 +1,11 @@
 {
-  "name": "the-meteor-course",
+  "name": "my-app",
   "private": true,
   "scripts": {
-    "start": "meteor run",
-    "dev": "meteor --settings development.settings.json"
+    "start": "meteor run"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.5",
-    "apollo-boost": "^0.3.1",
-    "apollo-link-ddp": "^2.0.0",
-    "apollo-server-express": "^2.4.8",
-    "bcrypt": "^3.0.6",
-    "express": "^4.16.4",
-    "graphql": "^14.2.1",
-    "graphql-tag": "^2.10.1",
-    "graphql-tools": "^4.0.4",
-    "jquery-validation": "^1.19.0",
-    "lodash": "^4.17.11",
-    "meteor-node-stubs": "^0.4.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-apollo": "^2.5.4",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "react-router-dom": "^5.0.0"
+    "@babel/runtime": "^7.3.4",
+    "meteor-node-stubs": "^0.4.1"
   }
 }

@@ -1,9 +1,11 @@
+import Todos from "./Todos";
+
 export default {
   Query: {},
   Todo: {},
   Mutation: {
     createTodo(obj, args, context) {
-      console.log("INSERT TODO ON DB");
+      return Todos.insert({ ...args });
     }
   }
 };

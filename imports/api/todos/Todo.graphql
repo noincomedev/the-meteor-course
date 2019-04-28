@@ -1,0 +1,15 @@
+type Todo {
+  _id: ID
+  createAt: String
+  taskName: String
+  done: Boolean
+}
+
+extend type Query {
+  allTodos: [Todo]
+}
+
+type Mutation {
+  createTodo(taskName: String!): Todo
+  closeTodo(_id: ID!): Todo
+}

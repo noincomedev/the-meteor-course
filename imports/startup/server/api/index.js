@@ -6,8 +6,11 @@ import merge from "lodash/merge";
 import UserSchema from "../../../api/users/User.graphql";
 import UserResolvers from "../../../api/users/resolvers";
 
-const typeDefs = [UserSchema];
-const resolvers = merge(UserResolvers);
+import TodoSchema from "../../../api/todos/Todo.graphql";
+import TodoResolvers from "../../../api/todos/resolvers";
+
+const typeDefs = [UserSchema, TodoSchema];
+const resolvers = merge(UserResolvers, TodoResolvers);
 
 const server = new ApolloServer({
   typeDefs,

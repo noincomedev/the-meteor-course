@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import $ from "jquery";
 import { PropTypes } from "prop-types";
+
 import validate from "../../../modules/validate";
 
 class FormValidation extends Component {
@@ -10,16 +12,10 @@ class FormValidation extends Component {
       rules,
       messages,
       errorPlacement: function(error, element) {
-        var parent = $(element)
-          .parent()
-          .parent();
-        if (parent) {
-          $(parent)
-            .append(error)
-            .css("color", "red");
-        } else {
-          error.insertAfter(parent).css("color", "red");
-        }
+        error
+          .insertAfter(element)
+          .css("color", "red")
+          .css("margin-bottom", "16px");
       },
       submitHandler() {
         component.handleSubmit();
@@ -34,16 +30,7 @@ class FormValidation extends Component {
       rules,
       messages,
       errorPlacement: function(error, element) {
-        var parent = $(element)
-          .parent()
-          .parent();
-        if (parent) {
-          $(parent)
-            .append(error)
-            .css("color", "red");
-        } else {
-          error.insertAfter(parent).css("color", "red");
-        }
+        error.insertAfter(element).css("color", "red");
       },
       submitHandler() {
         component.handleSubmit();

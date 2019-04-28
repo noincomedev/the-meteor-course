@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import gql from "graphql-tag";
 import { graphql } from "react-apollo";
+import { withRouter } from "react-router-dom";
 
 import FormValidation from "../utils/FormValidation";
 
@@ -16,10 +17,16 @@ class TodoForm extends Component {
   };
 
   onSubmit = () => {
+    const { history } = this.props;
     const { taskName } = this.state;
     this.props
-      .createTodo({ variables: { taskName } })
-      .then(console.log("TODO CREATED"));
+      .createTodo({
+        variables: { taskName },
+        refetchQueries: "allTodos"
+      })
+      .then(() =>
+        history.push(Meteor.settings.public.router.public_routes.index.PATH)
+      );
   };
 
   render() {
@@ -35,6 +42,7 @@ class TodoForm extends Component {
               Meteor.settings.public.forms.add_todo.input.PLACEHOLDER
             }
             name="taskName"
+            value={taskName}
             onChange={this.handleChange}
           />
           <input
@@ -61,4 +69,4 @@ export default graphql(CREATE_TODO, {
   options: {
     refetchQueries: ["allTodos"]
   }
-})(TodoForm);
+})(withRouter(TodoForm));

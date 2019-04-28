@@ -17,11 +17,11 @@ Todos.deny({
 
 Todos.schema = new SimpleSchema({
   _id: {
-    type: "String",
+    type: String,
     optional: false
   },
   taskName: {
-    type: "String",
+    type: String,
     optional: false
   },
   createdAt: {
@@ -37,6 +37,14 @@ Todos.schema = new SimpleSchema({
     optional: false,
     autoValue() {
       if (this.isInsert || this.isUpdate) return new Date().toISOString();
+    }
+  },
+  done: {
+    type: Boolean,
+    label: "done",
+    optional: false,
+    autoValue() {
+      if (this.isInsert) return false;
     }
   }
 });

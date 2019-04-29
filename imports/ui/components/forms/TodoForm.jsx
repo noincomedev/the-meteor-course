@@ -24,16 +24,14 @@ class TodoForm extends Component {
         variables: { taskName },
         refetchQueries: "allTodos"
       })
-      .then(() =>
-        history.push(Meteor.settings.public.router.public_routes.index.PATH)
-      );
+      .then(() => history.push(Meteor.settings.public.router.index.PATH));
   };
 
   render() {
     const { taskName } = this.state;
     return (
       <FormValidation onHandleSubmit={this.onSubmit}>
-        <div className="container col align-items-center">
+        <div id="create-todo-form" className="container col align-items-center">
           <input
             type="text"
             className="input-text"
@@ -46,7 +44,7 @@ class TodoForm extends Component {
             onChange={this.handleChange}
           />
           <input
-            className="button"
+            className="button-primary"
             type="submit"
             value={Meteor.settings.public.forms.add_todo.submit.LABEL}
           />

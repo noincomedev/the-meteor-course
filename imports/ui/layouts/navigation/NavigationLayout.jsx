@@ -5,11 +5,9 @@ import PublicNav from "../../components/navigation/Public";
 import PrivateNav from "../../components/navigation/Private";
 
 export default withRouter(({ match }) => (
-  <nav className="nav container justify-space-bet">
+  <nav className="nav container align-items-center justify-space-bet">
     <Link to={Meteor.settings.public.router.index.PATH}>
-      <h1 className="headline">
-        {Meteor.settings.public.constants.pages.index.HEADLINE}
-      </h1>
+      <h3 className="headline">{Meteor.settings.public.nav.logo.LABEL}</h3>
     </Link>
     {Meteor.userId() ? <PrivateNav /> : <PublicNav />}
   </nav>

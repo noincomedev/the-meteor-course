@@ -3,12 +3,22 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+a:visited {
+  color: #212121;
+}
+
 #main {
+  padding: 24px;
 }
 
 #react-root {
   height: 100%;
-  background-color: black;
+  background-color: #212121;
 }
 
 .align-items-center {
@@ -28,25 +38,38 @@ body {
   width: 33%;
 }
 
-.button {
+.button-primary {
+  background-color: #1db954;
+  border-color: #1db954;
   cursor: pointer;
   border-radius: 15px;
-  height: 6vh;
-  background: black;
   outline: none !important;
-  border: 2px solid fuchsia;
-  color: fuchsia;
-  min-width: 125px;
+  min-width: 75px;
 }
 
-.button:hover {
-  background-color: fuchsia;
+.button-primary:hover {
+  background-color: #1db954;
+  color: white;
+}
+
+.button-secondary {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border-radius: 15px;
+  outline: none !important;
+  border: 1px solid #1db954;
+  color: #1db954;
+  min-width: 75px;
+}
+
+.button-secondary:hover {
+  background-color: #1db954;
   color: white;
 }
 
 .headline {
-  color: greenyellow;
-  font-size: 2.5rem;
+  color: white;
+  font-size: rem;
   margin: 0;
 }
 
@@ -58,19 +81,20 @@ body {
 .input-text {
   height: 48px;
   background-color: black;
-  border: 1px solid yellowgreen;
-  color: yellowgreen;
+  border: 1px solid #535353;
+  color: #b3b3b3;
   font-size: 32px;
   padding: 4px;
   margin-bottom: 16px;
+  border-radius: 8px;
 }
 
 .input-text:focus {
   outline: none !important;
   height: 48px;
   background-color: black;
-  border: 1px solid yellow !important;
-  color: yellow !important;
+  border: 1px solid #1db954 !important;
+  color: white !important;
 }
 
 .justify-content-center {
@@ -82,14 +106,30 @@ body {
 }
 
 .nav {
-  padding: 32px;
+  padding: 8px;
+  background-color: #1db954;
+}
+
+.nav-link {
+  margin: 0;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
 
 .todo {
-  border: 1px solid yellow;
   padding: 8px 16px;
+  margin: 8px;
+  background-color: #121212;
+  border-radius: 15px;
 }
 
 .todo-title {
-  color: white;
+  color: #b3b3b3;
+}
+
+#create-todo-form {
+  padding: 24px 16px;
+  background-color: #121212;
 }

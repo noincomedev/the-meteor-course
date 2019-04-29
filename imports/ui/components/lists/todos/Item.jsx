@@ -20,6 +20,7 @@ export default ({ _id, taskName, done }) => (
           <h1 className="todo-title">{taskName}</h1>
           {!done && (
             <button
+              className="button-secondary"
               onClick={event =>
                 closeTodo({
                   variables: { _id },

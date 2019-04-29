@@ -34,7 +34,7 @@
       "lists": {
         "todos": {
           "item": {
-            "ACTION_BTN_LBL": "Close"
+            "ACTION_BTN_LBL": "DONE"
           }
         }
       }
@@ -50,6 +50,9 @@
       }
     },
     "nav": {
+      "logo": {
+        "LABEL": "TODOFY"
+      },
       "private": {
         "LINKS": [{ "key": "link1", "to": "/add-todo", "label": "ADD TODO" }]
       },

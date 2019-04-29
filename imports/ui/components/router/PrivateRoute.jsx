@@ -6,7 +6,7 @@ import { Route, Redirect } from "react-router-dom";
 import Navigation from "../../layouts/navigation/NavigationLayout";
 
 const PublicRoute = ({ component, content, exact, name, path, title }) => {
-  if (Meteor.userId()) return <Redirect to="/" />;
+  if (!Meteor.userId()) return <Redirect to="/" />;
   return (
     <Route
       exact={exact}

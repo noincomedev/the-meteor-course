@@ -24,6 +24,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow: scroll;
 }
 
 #react-root {
@@ -34,7 +35,6 @@ a:visited {
   flex-direction: column;
   flex: 1;
   height: 100%;
-  overflow: scroll;
 }
 
 .align-items-center {
@@ -52,7 +52,7 @@ a:visited {
 
 .button-primary:hover {
   background-color: #1db954;
-  color: white;
+  color: #535353;
 }
 
 .button-secondary {
@@ -68,6 +68,12 @@ a:visited {
 .button-secondary:hover {
   background-color: #1db954;
   color: white;
+}
+
+.button-lg {
+  height: 50px;
+  font-weight: bolder;
+  font-size: 1.15rem;
 }
 
 .container {
@@ -97,7 +103,7 @@ a:visited {
 
 .input-text {
   height: 48px;
-  background-color: black;
+  background-color: #121212;
   border: 1px solid #535353;
   color: #b3b3b3;
   font-size: 32px;
@@ -109,7 +115,7 @@ a:visited {
 .input-text:focus {
   outline: none !important;
   height: 48px;
-  background-color: black;
+  background-color: #121212;
   border: 1px solid #1db954 !important;
   color: white !important;
 }
@@ -138,18 +144,17 @@ a:visited {
   text-decoration: underline;
 }
 
-.todo {
-  padding: 8px 16px;
-  margin: 8px;
+.paper {
   background-color: #121212;
   border-radius: 15px;
+  padding: 16px;
+}
+
+.todo {
+  margin-bottom: 16px;
 }
 
 .todo-title {
   color: #b3b3b3;
-}
-
-#create-todo-form {
-  padding: 24px 16px;
-  background-color: #121212;
+  margin: 0;
 }

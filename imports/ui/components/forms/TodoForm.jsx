@@ -31,7 +31,7 @@ class TodoForm extends Component {
     const { taskName } = this.state;
     return (
       <FormValidation onHandleSubmit={this.onSubmit}>
-        <div id="create-todo-form" className="container col align-items-center">
+        <div className="container col align-items-center paper">
           <input
             type="text"
             className="input-text"

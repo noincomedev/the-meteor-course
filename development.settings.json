@@ -47,6 +47,26 @@
         "submit": {
           "LABEL": "ADD"
         }
+      },
+      "accounts": {
+        "signup": {
+          "HEADLINE": "Create Account",
+          "email": {
+            "PLACEHOLDER": "Email"
+          },
+          "password": {
+            "PLACEHOLDER": "Password"
+          },
+          "confirmation": {
+            "PLACEHOLDER": "Repeat Password"
+          },
+          "username": {
+            "PLACEHOLDER": "Username"
+          },
+          "submit": {
+            "LABEL": "SUBMIT"
+          }
+        }
       }
     },
     "nav": {

@@ -1,5 +1,6 @@
 type Todo {
   _id: ID
+  owner: ID
   createAt: String
   taskName: String
   done: Boolean
@@ -7,6 +8,7 @@ type Todo {
 
 extend type Query {
   allTodos: [Todo]
+  userTodos: [Todo]
 }
 
 type Mutation {

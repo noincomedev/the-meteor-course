@@ -4,9 +4,9 @@ import { Query } from "react-apollo";
 
 import Todos from "../components/lists/todos/List";
 
-const ALL_TODOS = gql`
-  query allTodos {
-    allTodos {
+const USER_TODOS = gql`
+  query userTodos {
+    userTodos {
       _id
       taskName
       done
@@ -15,12 +15,12 @@ const ALL_TODOS = gql`
 `;
 
 export default () => (
-  <Query query={ALL_TODOS} fetchPolicy="network-only">
+  <Query query={USER_TODOS} fetchPolicy="network-only">
     {({ error, loading, data }) => {
       if (loading) return <h1>LOADING</h1>;
       if (error) return `Error: ${error}`;
-      const { allTodos } = data;
-      return <Todos todos={allTodos} />;
+      const { userTodos } = data;
+      return <Todos todos={userTodos} />;
     }}
   </Query>
 );

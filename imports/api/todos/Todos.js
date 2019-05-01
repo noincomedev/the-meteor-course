@@ -20,6 +20,10 @@ Todos.schema = new SimpleSchema({
     type: String,
     optional: false
   },
+  owner: {
+    type: String,
+    optional: false
+  },
   taskName: {
     type: String,
     optional: false

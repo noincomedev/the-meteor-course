@@ -1,23 +1,85 @@
+@media only screen and (max-width: 900px) {
+  .col-1-3 {
+    width: 75% !important;
+  }
+}
+
 body {
   margin: 0;
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+a:visited {
+  color: #212121;
+}
+
 #main {
+  padding: 24px;
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: scroll;
 }
 
 #react-root {
+  background-color: #212121;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   height: 100%;
-  background-color: black;
 }
 
 .align-items-center {
   align-items: center;
 }
 
+.button-primary {
+  background-color: #1db954;
+  border-color: #1db954;
+  cursor: pointer;
+  border-radius: 15px;
+  outline: none !important;
+  min-width: 75px;
+}
+
+.button-primary:hover {
+  background-color: #1db954;
+  color: #535353;
+}
+
+.button-secondary {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border-radius: 15px;
+  outline: none !important;
+  border: 1px solid #1db954;
+  color: #1db954;
+  min-width: 75px;
+}
+
+.button-secondary:hover {
+  background-color: #1db954;
+  color: white;
+}
+
+.button-lg {
+  height: 50px;
+  font-weight: bolder;
+  font-size: 1.15rem;
+}
+
 .container {
   display: flex;
   flex: 1;
+  box-sizing: border-box;
 }
 
 .col {
@@ -28,25 +90,9 @@ body {
   width: 33%;
 }
 
-.button {
-  cursor: pointer;
-  border-radius: 15px;
-  height: 6vh;
-  background: black;
-  outline: none !important;
-  border: 2px solid fuchsia;
-  color: fuchsia;
-  min-width: 125px;
-}
-
-.button:hover {
-  background-color: fuchsia;
-  color: white;
-}
-
 .headline {
-  color: greenyellow;
-  font-size: 2.5rem;
+  color: white;
+  font-size: rem;
   margin: 0;
 }
 
@@ -57,24 +103,29 @@ body {
 
 .input-text {
   height: 48px;
-  background-color: black;
-  border: 1px solid yellowgreen;
-  color: yellowgreen;
+  background-color: #121212;
+  border: 1px solid #535353;
+  color: #b3b3b3;
   font-size: 32px;
   padding: 4px;
   margin-bottom: 16px;
+  border-radius: 8px;
 }
 
 .input-text:focus {
   outline: none !important;
   height: 48px;
-  background-color: black;
-  border: 1px solid yellow !important;
-  color: yellow !important;
+  background-color: #121212;
+  border: 1px solid #1db954 !important;
+  color: white !important;
 }
 
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
 }
 
 .justify-space-bet {
@@ -82,14 +133,38 @@ body {
 }
 
 .nav {
-  padding: 32px;
+  min-height: 7vh;
+  padding: 8px;
+  background-color: #1db954;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-link {
+  margin: 0px 16px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.paper {
+  background-color: #121212;
+  border-radius: 15px;
+  padding: 16px;
 }
 
 .todo {
-  border: 1px solid yellow;
-  padding: 8px 16px;
+  margin-bottom: 16px;
+  flex: 0;
 }
 
 .todo-title {
+  color: #b3b3b3;
+  margin: 0;
+}
+
+#logout-button:hover {
   color: white;
+  cursor: pointer;
 }

@@ -3,32 +3,58 @@ import gql from "graphql-tag";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { graphql } from "react-apollo";
 
+import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
 import AddTodo from "../../pages/AddTodoPage";
+import Home from "../../pages/HomePage";
 import Index from "../../pages/IndexPage";
 import NotFound from "../../pages/NotFoundPage";
+import Signin from "../../pages/SigninPage";
 
 const Router = ({ loading, user }) => {
   if (loading) return <h1>LOADING</h1>;
   return (
     <BrowserRouter>
       <Switch>
-        <PublicRoute
+        <Route exact path={Meteor.settings.public.router.index.PATH}>
+          {user ? (
+            <PrivateRoute
+              exact
+              path={Meteor.settings.public.router.index.PATH}
+              name={Meteor.settings.public.router.index.NAME}
+              title={Meteor.settings.public.router.index.TITLE}
+              content={Meteor.settings.public.router.index.CONTENT}
+              component={Home}
+            />
+          ) : (
+            <PublicRoute
+              exact
+              path={Meteor.settings.public.router.index.PATH}
+              name={Meteor.settings.public.router.index.NAME}
+              title={Meteor.settings.public.router.index.TITLE}
+              content={Meteor.settings.public.router.index.CONTENT}
+              component={Index}
+            />
+          )}
+        </Route>
+        <PrivateRoute
           exact
-          path={Meteor.settings.public.router.public_routes.index.PATH}
-          name={Meteor.settings.public.router.public_routes.index.NAME}
-          title={Meteor.settings.public.router.public_routes.index.TITLE}
-          content={Meteor.settings.public.router.public_routes.index.CONTENT}
-          component={Index}
+          path={Meteor.settings.public.router.private_routes.add_todo.PATH}
+          name={Meteor.settings.public.router.private_routes.add_todo.NAME}
+          title={Meteor.settings.public.router.private_routes.add_todo.TITLE}
+          content={
+            Meteor.settings.public.router.private_routes.add_todo.CONTENT
+          }
+          component={AddTodo}
         />
         <PublicRoute
           exact
-          path={Meteor.settings.public.router.public_routes.add_todo.PATH}
-          name={Meteor.settings.public.router.public_routes.add_todo.NAME}
-          title={Meteor.settings.public.router.public_routes.add_todo.TITLE}
-          content={Meteor.settings.public.router.public_routes.add_todo.CONTENT}
-          component={AddTodo}
+          path={Meteor.settings.public.router.public_routes.signin.PATH}
+          name={Meteor.settings.public.router.public_routes.signin.NAME}
+          title={Meteor.settings.public.router.public_routes.signin.TITLE}
+          content={Meteor.settings.public.router.public_routes.signin.CONTENT}
+          component={Signin}
         />
         <PublicRoute
           name={Meteor.settings.public.router.public_routes.not_found.NAME}
@@ -44,7 +70,7 @@ const Router = ({ loading, user }) => {
 };
 
 const CURRENT_USER = gql`
-  query currentUser {
+  query user {
     user {
       _id
     }

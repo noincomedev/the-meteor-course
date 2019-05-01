@@ -2,24 +2,32 @@
   "public": {
     "name": "The Meteor Course",
     "router": {
+      "index": {
+        "NAME": "index",
+        "PATH": "/",
+        "TITLE": "HOME",
+        "CONTENT": "index"
+      },
       "public_routes": {
-        "index": {
-          "NAME": "index",
-          "PATH": "/",
-          "TITLE": "HOME",
-          "CONTENT": "index"
-        },
-        "add_todo": {
-          "NAME": "add-todo",
-          "PATH": "/add-todo",
-          "TITLE": "Add Todo",
-          "CONTENT": "add-todo"
+        "signin": {
+          "NAME": "signin",
+          "PATH": "/signin",
+          "TITLE": "Login",
+          "CONTENT": "signin"
         },
         "not_found": {
           "NAME": "not_found",
           "PATH": "/not_found",
           "TITLE": "Not Found",
           "CONTENT": "not_found"
+        }
+      },
+      "private_routes": {
+        "add_todo": {
+          "NAME": "add-todo",
+          "PATH": "/add-todo",
+          "TITLE": "Add Todo",
+          "CONTENT": "add-todo"
         }
       }
     },
@@ -32,7 +40,7 @@
       "lists": {
         "todos": {
           "item": {
-            "ACTION_BTN_LBL": "Close"
+            "ACTION_BTN_LBL": "DONE"
           }
         }
       }
@@ -45,11 +53,49 @@
         "submit": {
           "LABEL": "ADD"
         }
+      },
+      "accounts": {
+        "signin": {
+          "HEADLINE": "Account Login",
+          "email": {
+            "PLACEHOLDER": "Email"
+          },
+          "password": {
+            "PLACEHOLDER": "Password"
+          },
+          "submit": {
+            "LABEL": "GO"
+          }
+        },
+        "signup": {
+          "HEADLINE": "Create Account",
+          "email": {
+            "PLACEHOLDER": "Email"
+          },
+          "password": {
+            "PLACEHOLDER": "Password"
+          },
+          "confirmation": {
+            "PLACEHOLDER": "Repeat Password"
+          },
+          "username": {
+            "PLACEHOLDER": "Username"
+          },
+          "submit": {
+            "LABEL": "SUBMIT"
+          }
+        }
       }
     },
     "nav": {
-      "public": {
+      "logo": {
+        "LABEL": "TODOFY"
+      },
+      "private": {
         "LINKS": [{ "key": "link1", "to": "/add-todo", "label": "ADD TODO" }]
+      },
+      "public": {
+        "LINKS": [{ "key": "link1", "to": "/signin", "label": "SIGN IN" }]
       }
     }
   }

@@ -1,26 +1,11 @@
 import React from "react";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
 
-import Todos from "../components/lists/todos/List";
-
-const ALL_TODOS = gql`
-  query allTodos {
-    allTodos {
-      _id
-      taskName
-      done
-    }
-  }
-`;
+import Signup from "../components/forms/accounts/SignupForm";
 
 export default () => (
-  <Query query={ALL_TODOS} fetchPolicy="network-only">
-    {({ error, loading, data }) => {
-      if (loading) return <h1>LOADING</h1>;
-      if (error) return `Error: ${error}`;
-      const { allTodos } = data;
-      return <Todos todos={allTodos} />;
-    }}
-  </Query>
+  <div className="container align-items-center justify-content-center">
+    <div className="col col-1-3">
+      <Signup />
+    </div>
+  </div>
 );

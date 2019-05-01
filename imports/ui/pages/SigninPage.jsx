@@ -1,9 +1,11 @@
 import React from "react";
 
-import TodoForm from "../components/forms/TodoForm";
+import Signin from "../components/forms/accounts/SigninForm";
 
 export default () => (
   <div className="container align-items-center justify-content-center">
-    <TodoForm />
+    <div className="col col-1-3">
+      <Signin />
+    </div>
   </div>
 );

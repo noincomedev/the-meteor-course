@@ -16,10 +16,11 @@ export default ({ _id, taskName, done }) => (
       if (loading) return <h1>LOADING</h1>;
       if (error) return `Error: ${error}`;
       return (
-        <div className="container col-1-3 todo align-items-center justify-space-bet">
+        <div className="container col-1-3 todo align-items-center justify-space-bet paper">
           <h1 className="todo-title">{taskName}</h1>
           {!done && (
             <button
+              className="button-secondary"
               onClick={event =>
                 closeTodo({
                   variables: { _id },

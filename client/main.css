@@ -156,6 +156,7 @@ a:visited {
 
 .todo {
   margin-bottom: 16px;
+  flex: 0;
 }
 
 .todo-title {

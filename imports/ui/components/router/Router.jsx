@@ -10,6 +10,7 @@ import AddTodo from "../../pages/AddTodoPage";
 import Home from "../../pages/HomePage";
 import Index from "../../pages/IndexPage";
 import NotFound from "../../pages/NotFoundPage";
+import Signin from "../../pages/SigninPage";
 
 const Router = ({ loading, user }) => {
   if (loading) return <h1>LOADING</h1>;
@@ -46,6 +47,14 @@ const Router = ({ loading, user }) => {
             Meteor.settings.public.router.private_routes.add_todo.CONTENT
           }
           component={AddTodo}
+        />
+        <PublicRoute
+          exact
+          path={Meteor.settings.public.router.public_routes.signin.PATH}
+          name={Meteor.settings.public.router.public_routes.signin.NAME}
+          title={Meteor.settings.public.router.public_routes.signin.TITLE}
+          content={Meteor.settings.public.router.public_routes.signin.CONTENT}
+          component={Signin}
         />
         <PublicRoute
           name={Meteor.settings.public.router.public_routes.not_found.NAME}

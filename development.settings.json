@@ -9,6 +9,12 @@
         "CONTENT": "index"
       },
       "public_routes": {
+        "signin": {
+          "NAME": "signin",
+          "PATH": "/signin",
+          "TITLE": "Login",
+          "CONTENT": "signin"
+        },
         "not_found": {
           "NAME": "not_found",
           "PATH": "/not_found",
@@ -49,6 +55,18 @@
         }
       },
       "accounts": {
+        "signin": {
+          "HEADLINE": "Account Login",
+          "email": {
+            "PLACEHOLDER": "Email"
+          },
+          "password": {
+            "PLACEHOLDER": "Password"
+          },
+          "submit": {
+            "LABEL": "GO"
+          }
+        },
         "signup": {
           "HEADLINE": "Create Account",
           "email": {

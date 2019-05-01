@@ -44,7 +44,7 @@ class TodoForm extends Component {
             onChange={this.handleChange}
           />
           <input
-            className="button-primary"
+            className="button-primary button-lg"
             type="submit"
             value={Meteor.settings.public.forms.add_todo.submit.LABEL}
           />

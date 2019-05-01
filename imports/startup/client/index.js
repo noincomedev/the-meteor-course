@@ -2,7 +2,7 @@ import {Meteor} from 'meteor/meteor'
 import {render} from 'react-dom'
 import React from  'react'
 
-import "../../ui/App.js"
+import App from "../../ui/App"
 Meteor.startup( () =>{
    console.log("Meteor start up");
    render( <App /> , document.getElementById("app") );

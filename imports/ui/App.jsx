@@ -5,7 +5,7 @@ export default class App extends Component{
     render() {
         return(
             <div className="container">
-                <h1>Meteor Up</h1>
+                <h1>Meteor Up And running </h1>
             </div>
         )
     }

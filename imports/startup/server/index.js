@@ -2,10 +2,13 @@ import {createApolloServer} from 'meteor/apollo'
 import { makeExecutableSchema } from "graphql-tools";
 
 
+
 const typeDefs = `
 
 type Query {
    name: String
+   price: String
+   description: String
 }
 
 `;
@@ -13,8 +16,15 @@ type Query {
 const  resolvers = {
     Query:{
         name(){
-            return "Isaac"
+            return "Best book"
+        },
+        price(){
+           return "60"
+        },
+        description(){
+            return "feature looks bright"
         }
+
     }
 
 };

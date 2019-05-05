@@ -1,0 +1,40 @@
+body{
+font-family: "Savoye LET";
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    background-color: #353535;
+    padding: 2em;
+    margin-bottom: 1.5em;
+    border-radius: 4em;
+    color: whitesmoke;
+}
+ul{
+    padding: 0;
+    text-align: center;
+}
+
+li{
+    font-size: 30px;
+    background: crimson;
+    color: white;
+    padding: 1em;
+    border-radius: 1em;
+    list-style: none;
+    margin-bottom: 1em;
+}
+li:nth-child(odd){
+    background-color: #353535;
+}
+
+@media (max-width: 1080px) {
+    .container{
+        width: 95%;
+    }
+
+}

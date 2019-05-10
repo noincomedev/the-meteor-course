@@ -7,19 +7,29 @@ const book = gql `
 name 
 price
 description
+products {
+ name
+}
+
 }
 
 `;
  class App extends Component{
-    render() {
+
+     render() {
+        const {data} = this.props;
+
+        if (data.loading === null) return null;
+        console.dir(this.props.products);
         return(
             <div className="container">
                 <h1>Strange things app  </h1>
                     <ul>
-                        <li>name: {this.props.data.name}</li>
-                        <li>price: {this.props.data.price}</li>
-                        <li>description: {this.props.data.description} </li>
+                        <li>{this.props.data.name}</li>
+                        <li>{this.props.data.price}</li>
+                        <li>{this.props.data.description}</li>
                     </ul>
+
             </div>
         )
     }

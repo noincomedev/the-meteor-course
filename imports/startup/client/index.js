@@ -23,7 +23,7 @@ const ApolloApp = () =>
     (
        <ApolloProvider client={client}>
           <App/>
-       </ApolloProvider> )
+       </ApolloProvider> );
 
 Meteor.startup( () =>{
    console.log("Meteor start up");
